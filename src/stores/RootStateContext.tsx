@@ -13,7 +13,6 @@ const RootStateContext = React.createContext<RootStateContextValue>(
 export const stores = {
   currenciesStore: new CurrenciesStore(),
   converterStore: new ConverterStore(),
-  
 };
 
 export const RootStateProvider: React.FC<React.PropsWithChildren<{}>> = ({

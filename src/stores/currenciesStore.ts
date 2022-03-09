@@ -1,8 +1,7 @@
 import axios from "axios";
 import { computed, observable, action, makeAutoObservable } from "mobx";
 import { TCoin, TCoinDiff } from "../types";
-import {stores} from "./RootStateContext";	
-//https://www.youtube.com/watch?v=hkvzZz3j3Lo&ab_channel=webDev
+import { stores } from "./RootStateContext";
 
 class CurrenciesStore {
   public coins: TCoin[] = [];
@@ -40,10 +39,10 @@ class CurrenciesStore {
       },
       {}
     );
-    if (this.coins.length > 0){
-      setTimeout(() =>this.coins = coins, 10000)
-    }else {
-      this.coins = coins
+    if (this.coins.length > 0) {
+      setTimeout(() => (this.coins = coins), 10000);
+    } else {
+      this.coins = coins;
     }
   };
   fetchCoins = () => {
@@ -63,10 +62,9 @@ class CurrenciesStore {
           };
           return obj;
         });
-       this.setCoins(coins);
-       stores.converterStore.setSelectedCoin('value1', coins[0])
-       stores.converterStore.setSelectedCoin('value2', coins[1])
-
+        this.setCoins(coins);
+        stores.converterStore.setSelectedCoin("value1", coins[0]);
+        stores.converterStore.setSelectedCoin("value2", coins[1]);
       });
   };
 }
