@@ -2,7 +2,7 @@
   "name": "crypto-mobx-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://marikakonturova.github.io/crypto-converter-mobx",
+  "homepage": "http://marikakonturova.github.io/crypto_converter_mobx",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
