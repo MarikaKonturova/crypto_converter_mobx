@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crypto-converter-mobx/static/css/main.0e75ad63.css",
+    "main.js": "/crypto-converter-mobx/static/js/main.c52b8973.js",
+    "index.html": "/crypto-converter-mobx/index.html",
+    "main.0e75ad63.css.map": "/crypto-converter-mobx/static/css/main.0e75ad63.css.map",
+    "main.c52b8973.js.map": "/crypto-converter-mobx/static/js/main.c52b8973.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e75ad63.css",
+    "static/js/main.c52b8973.js"
+  ]
+}
