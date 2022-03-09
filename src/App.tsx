@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./styles/css/styles.css";
+import Container, { ContainerProps } from "@mui/material/Container";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+import { CryptoTable, ConverterBlock } from "./components";
+import { observer, useObserver } from "mobx-react-lite";
+import { useRootStore } from "./stores/RootStateContext";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const {currenciesStore, converterStore} = useRootStore()
+  return useObserver(()=>(
+    <Container maxWidth="lg">
+      <Grid container spacing={2} className="grid">
+        <Grid item xs={8}>
+            <CryptoTable currenciesStore={currenciesStore} converterStore={converterStore} />
+        </Grid>
+        <Grid item xs={4}>
+          <Paper elevation={2}>
+           <ConverterBlock converterStore={converterStore} currenciesStore={currenciesStore}/>    
+          </Paper>
+        </Grid>
+      </Grid>
+    </Container>
+  ))
 }
 
-export default App;
+export default observer(App);

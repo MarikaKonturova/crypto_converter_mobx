@@ -1,0 +1,53 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-animation: opening 1s ease-in-out;
+          animation: opening 1s ease-in-out;
+}
+
+.grid {
+  padding-top: 10vh;
+}
+
+.cryptoInputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  padding: 10px 0 20px;
+}
+
+.currencyInput {
+  width: 60%;
+}
+
+.currencyType {
+  width: 30%;
+}
+
+.сurrencyTypography {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.coinImg {
+  width: 25px;
+}
